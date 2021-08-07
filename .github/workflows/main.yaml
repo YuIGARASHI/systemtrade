@@ -1,0 +1,13 @@
+name: exec rebalancing
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: rebalance
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: pip install -r requirments.txt
+      - run: python src/main.py
