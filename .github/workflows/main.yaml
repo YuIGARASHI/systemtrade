@@ -10,5 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: pip install -r requirments.txt
-      - run: export PYTHONPATH="/home/runner/work/systemtrade/systemtrade/src:$PYTHONPATH"
       - run: python src/main.py

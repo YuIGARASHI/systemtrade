@@ -7,8 +7,8 @@ import time
 import sys
 import os
 from datetime import datetime
-from src.common import BalanceInfo, TickerInfo, ProductId
-from src.line_handler import LineHandler
+from common import BalanceInfo, TickerInfo, ProductId
+from line_handler import LineHandler
 
 
 class LiquidHandler:
