@@ -1,7 +1,10 @@
 name: exec rebalancing
-
 on:
   workflow_dispatch:
+env:
+  LINE_MESSAGE_API_ACCESS_TOKEN: ${{secrets.LINE_MESSAGE_API_ACCESS_TOKEN}}
+  LIQUID_API_KEY: ${{secrets.LIQUID_API_KEY}}
+  LIQUID_API_SECRET_KEY: ${{secrets.LIQUID_API_SECRET_KEY}}
 
 jobs:
   build:
