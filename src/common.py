@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from enum import Enum
-
-
 class BalanceInfo:
     '''
     取引所の残高情報。
