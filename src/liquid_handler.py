@@ -130,12 +130,12 @@ class LiquidHandler:
         try:
             json_data = requests.post(url, data=json.dumps(params), headers=headers).json()
         except:
-            self.self.line_handler.post_to_igarashi339("make_market_order:Liquidとの通信に失敗しました。")
+            self.line_handler.post_to_igarashi339("make_market_order:Liquidとの通信に失敗しました。")
             return -1
         if not json_data.get("id"):
-            self.self.line_handler.post_to_igarashi339("make_market_order:Liquidへの注文に失敗しました。Json, 注文内容をダンプします。")
-            self.self.line_handler.post_to_igarashi339(json_data)
-            self.self.line_handler.post_to_igarashi339(str(product_id) + " >>>> " + str(volume) + " >>>> " + order_type)
+            self.line_handler.post_to_igarashi339("make_market_order:Liquidへの注文に失敗しました。Json, 注文内容をダンプします。")
+            self.line_handler.post_to_igarashi339(json_data)
+            self.line_handler.post_to_igarashi339(str(product_id) + " >>>> " + str(volume) + " >>>> " + order_type)
             return -1
         self.balance = None
         return 0
@@ -155,7 +155,7 @@ class LiquidHandler:
         try:
             json_data = requests.get(url, timeout=(self.connect_timeout, self.read_timeout)).json()
         except:
-            self.self.line_handler.post_to_igarashi339("fetch_ticker_info: Liquidとの通信に失敗しました。")
+            self.line_handler.post_to_igarashi339("fetch_ticker_info: Liquidとの通信に失敗しました。")
             return None
 
         # 板情報オブジェクト生成 & 返却
