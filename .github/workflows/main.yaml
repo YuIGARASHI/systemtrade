@@ -1,16 +1,16 @@
-name: exec rebalancing
-on:
-  schedule:
-    - cron:  '0 * * * *'
-env:
-  LINE_MESSAGE_API_ACCESS_TOKEN: ${{secrets.LINE_MESSAGE_API_ACCESS_TOKEN}}
-  LIQUID_API_KEY: ${{secrets.LIQUID_API_KEY}}
-  LIQUID_API_SECRET_KEY: ${{secrets.LIQUID_API_SECRET_KEY}}
-jobs:
-  build:
-    name: rebalance
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: pip install -r requirments.txt
-      - run: python src/main.py
+# name: exec rebalancing
+# on:
+#   schedule:
+#     - cron:  '0 * * * *'
+# env:
+#   LINE_MESSAGE_API_ACCESS_TOKEN: ${{secrets.LINE_MESSAGE_API_ACCESS_TOKEN}}
+#   LIQUID_API_KEY: ${{secrets.LIQUID_API_KEY}}
+#   LIQUID_API_SECRET_KEY: ${{secrets.LIQUID_API_SECRET_KEY}}
+# jobs:
+#   build:
+#     name: rebalance
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - run: pip install -r requirments.txt
+#       - run: python src/main.py
